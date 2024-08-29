@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.body-admin-l {
+  background-image: url("../assets/brand-depan.jpg");
+  background-size: 100%;
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+/* Khusus untuk tampilan mobile */
+@media only screen and (max-width: 768px) {
+  .body-admin-l {
+    background-size: cover;
+    background-size: 400%;
+    background-position-y: -400px;
+    background-position-x: -600px;
+  }
+  /* CSS untuk box-img-home */
+  #box-img-home {
+    position: relative;
+    background-image: url("./assets/lake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    transition: background-image 1s ease-in-out;
+  }
+
+  /* Overlay untuk membuat gambar lebih gelap */
+  #box-img-home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Overlay gelap dengan transparansi */
+    z-index: 1;
+  }
+
+  #box-img-home > *:not(.overlay) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+#box-list-nav {
+  background-image: url("./assets/batik.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative; /* Important for positioning the pseudo-element */
+  overflow: hidden; /* To prevent the pseudo-element from affecting the layout */
+}
+
+#box-list-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity to make it darker */
+  z-index: 1;
+}
+
+#box-list-nav ul {
+  position: relative;
+  z-index: 2; /* Make sure the content is above the pseudo-element */
+}
+
+#box-map {
+  background-image: url("./assets/brand-depan.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative; /* Important for positioning the pseudo-element */
+  overflow: hidden; /* To prevent the pseudo-element from affecting the layout */
+}
+#box-map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity to make it darker */
+  z-index: 1;
+}
+#box-map > *:not(.overlay2) {
+  position: relative;
+  z-index: 2;
+}
+
+#lok-nagari {
+  background-image: url("./assets/batik.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative; /* Important for positioning the pseudo-element */
+  overflow: hidden; /* To prevent the pseudo-element from affecting the layout */
+}
+
+#lok-nagari::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity to make it darker */
+  z-index: 1;
+}
+
+#lok-nagari > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+/* Pastikan konten lain tetap berada di atas overlay */
+
+.vapi-btn {
+  position: fixed;
+  top: 85%;
+  background-color: #dd00ff;
+}
+
+@media (max-width: 600px) {
+  .vapi-btn {
+    top: 30%;
+  }
+}
