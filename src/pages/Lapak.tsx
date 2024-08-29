@@ -5,6 +5,7 @@ import dakakUngu from "../assets/dakak-ungu.jpg";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaShop } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function LapakNagari() {
 
@@ -56,11 +57,11 @@ function LapakNagari() {
 
       <div className="w-full text-white ">
         <nav className="w-full bg-orange-700 flex justify-start items-center fixed top-0 h-[40px]  ">
-          <a href="/" className="w-[37%] flex justify-start items-start text-center pl-5  ">
+          <Link to="/" className="w-[37%] flex justify-start items-start text-center pl-5  ">
             <p className="hover:text-black cursor-pointer text-[20px] ">
               <FaArrowAltCircleLeft />
             </p>
-          </a>
+          </Link>
           <h1 className=" w-[50%]  font-serif font-semibold "></h1>
         </nav>
       </div>

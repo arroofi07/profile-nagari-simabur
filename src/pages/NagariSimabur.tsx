@@ -17,6 +17,7 @@ import { FaShopify } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
 import { FaMosque } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -83,24 +84,24 @@ const NagariSimabur = () => {
   const list3 = [
     {
       text: "Ruang Lapor",
-      url: "/lapor",
+      url: "/",
       icon: <HiSpeakerphone />,
     },
     {
       text: "Galeri Nagari",
-      url: "/galeri",
+      url: "/",
       icon: <FaCamera />,
     },
     {
       text: "Arsip Nagari",
-      url: "/arsip",
+      url: "/",
       icon: <FaFolder />,
     },
   ];
 
   return (
     <div className="flex flex-col justify-center items-center text-center w-full  h-auto">
-   
+
 
       {/* Main Content */}
       <div
@@ -164,42 +165,42 @@ const NagariSimabur = () => {
           {/* list 1 */}
           <ul className=" flex justify-center items-center space-x-3">
             {list.map((value, key) => (
-              <a
+              <Link
                 key={key}
-                href={value.url}
+                to={value.url}
                 className="bg-orange-700 active:animate-ping hover:bg-black hover:text-orange-700 cursor-pointer bg-opacity-35 p-1 border-[1px] border-orange-700 text-[20px] rounded-[3px] w-[100px] h-[60px] flex flex-col justify-center items-center"
               >
                 {value.icon}
                 <p className="text-[12px] font-serif"> {value.text} </p>
-              </a>
+              </Link>
             ))}
           </ul>
 
           {/* list 2 */}
           <ul className=" flex justify-center items-center space-x-3">
             {list2.map((value, key) => (
-              <a
+              <Link
                 key={key}
-                href={value.url}
+                to={value.url}
                 className="bg-orange-700 active:animate-ping hover:bg-black hover:text-orange-700 cursor-pointer bg-opacity-35 p-1 border-[1px] border-orange-700 text-[20px] rounded-[3px] w-[100px] h-[60px] flex flex-col justify-center items-center"
               >
                 {value.icon}
                 <p className="text-[12px] font-serif"> {value.text} </p>
-              </a>
+              </Link>
             ))}
           </ul>
 
           {/* list 3 */}
           <ul className=" flex justify-center items-center space-x-3">
             {list3.map((value, key) => (
-              <a
+              <Link
                 key={key}
-                href={value.url}
+                to={value.url}
                 className="bg-orange-700 active:animate-ping hover:bg-black hover:text-orange-700 cursor-pointer bg-opacity-35 p-1 border-[1px] border-orange-700 text-[20px] rounded-[3px] w-[100px] h-[60px] flex flex-col justify-center items-center"
               >
                 {value.icon}
                 <p className="text-[12px] font-serif"> {value.text} </p>
-              </a>
+              </Link>
             ))}
           </ul>
         </div>

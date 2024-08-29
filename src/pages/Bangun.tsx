@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import L from 'leaflet';
 import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 function Bangun() {
@@ -18,11 +19,11 @@ function Bangun() {
 
       <div className="w-full text-white ">
         <nav className="w-full bg-orange-700 flex justify-start items-center fixed top-0 h-[40px]  ">
-          <a href="/" className="w-[37%] flex justify-start items-start text-center pl-5  ">
+          <Link to="/" className="w-[37%] flex justify-start items-start text-center pl-5  ">
             <p className="hover:text-black cursor-pointer text-[20px] ">
               <FaArrowAltCircleLeft />
             </p>
-          </a>
+          </Link>
           <h1 className=" w-[50%]  font-serif font-semibold ">Peta Nagari</h1>
         </nav>
       </div>

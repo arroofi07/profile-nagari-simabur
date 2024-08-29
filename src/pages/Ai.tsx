@@ -3,6 +3,7 @@ import { requestToGroqAi } from "./utils/groq";
 import { Light as SyntaxHighLight } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -111,11 +112,11 @@ function Ai() {
 
       <div className="w-full text-white ">
         <nav className="w-full bg-orange-700 flex justify-start items-center fixed top-0 h-[40px]  ">
-          <a href="/" className="w-[25%] flex justify-start items-start text-center pl-5  ">
+          <Link to="/" className="w-[25%] flex justify-start items-start text-center pl-5  ">
             <p className="hover:text-black cursor-pointer text-[20px] ">
               <FaArrowAltCircleLeft />
             </p>
-          </a>
+          </Link>
           <h1 className=" w-[50%]  font-serif font-semibold ">Kecerdasan Buatan</h1>
         </nav>
       </div>

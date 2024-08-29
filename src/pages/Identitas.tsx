@@ -1,4 +1,5 @@
 import { FaArrowAltCircleLeft } from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 function Identitas() {
 
@@ -17,11 +18,11 @@ function Identitas() {
     <div className=" text-white " >
       <div className="w-full text-white ">
         <nav className="w-full bg-orange-700 flex justify-start items-center fixed top-0 h-[40px]  ">
-          <a href="/" className="w-[33%] flex justify-start items-start text-center pl-5  ">
+          <Link to="/" className="w-[33%] flex justify-start items-start text-center pl-5  ">
             <p className="hover:text-black cursor-pointer text-[20px] ">
               <FaArrowAltCircleLeft />
             </p>
-          </a>
+          </Link>
           <h1 className=" w-[50%]  font-serif font-semibold ">Identitas Nagari</h1>
         </nav>
       </div>
